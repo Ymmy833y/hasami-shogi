@@ -24,3 +24,4 @@ display: block;">
 4. ```sh
    python .\run.py
    ```
+5. Access http://localhost:5000/
