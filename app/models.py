@@ -219,6 +219,11 @@ class HasamiShogi:
             return True, self.ENEMY
         if self.count_used(self.ENEMY) < self.BOARD_SIZE / 2:
             return True, self.PLAYER
+
+        # 相手の駒と3枚差がつくと負けになる
+        if self.count_used(self.player) - self.count_used(-self.player) >= 3:
+            return True, self.player
+
         return False, None
 
     def count_used(self, player):
